@@ -80,7 +80,7 @@ footer {
 
 
     /*Visual Styles*/
-    background: url('Assets/Hero Image.jpg') center center/cover no-repeat;
+    background: url('/Assets/Hero Image.jpg') center center/cover no-repeat;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     opacity: 0;
     transition: opacity 1.2s ease;
