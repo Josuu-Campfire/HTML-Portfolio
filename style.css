@@ -127,7 +127,7 @@ footer {
     text-align: center;
     padding: 20px;
     margin: 0;
-    width: 100%;
+    width: 40%;
     box-sizing: border-box;
 
     /*Visual Styles*/
@@ -145,6 +145,9 @@ footer {
     font-size: 2.5rem;
     margin: 0 0 10px 0;
     opacity: 0;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
     transform: translateY(60px) scale(0.95);
     /* Start below and slightly scaled down */
     transition:
@@ -165,10 +168,16 @@ footer {
     font-weight: 300;
     font-style: normal;
     font-size: 1.1rem;
+    x: center;
+    text-align: center;
     margin: 0;
+
     opacity: 0;
     text-shadow: 3px 3px 5px white;
-    color: black;
+    color: white;
+    background: #7d5c61;
+    background: linear-gradient(154deg, rgba(125, 92, 97, 0.5) 4%, rgba(112, 54, 102, 0.5) 13%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0.5) 80%, rgba(64, 18, 18, 0.5) 100%);
+    border-radius: 24px;
     transform: translateY(60px) scale(0.95);
     /* Start below and slightly scaled down */
     transition:
