@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colas Portfolio</title>
+
+
+<link rel="stylesheet" href="Portfolio1.css">
+
+
+<style>
+  
+  :root {
+    --main-color1: #6958c9;
+    --main-color2: #6526ad;
+    --footer-color: #5317b3;
+    --box-bg: rgba(255, 255, 255, 0.85);
+  }
+
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, var(--main-color1), var(--main-color2));
+    background-size: 400% 400%;
+    animation: moveGradient 15s ease infinite;
+    color: #000;
+    line-height: 1.6;
+  }
+  @keyframes moveGradient {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+
+  header {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--box-bg);
+    color: #000;
+    border-radius: 15px;
+    text-shadow: 2px 2px 4px #fff; 
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+  }
+  @keyframes fadeIn { to { opacity: 1; } }
+
+  header h1 {
+    font-family: Georgia, serif;       
+    text-transform: uppercase;         
+    text-decoration: underline;        
+    margin-bottom: 10px;
+  }
+  header p {
+    font-family: "Courier New", monospace; 
+    font-style: italic;                    
+  }
+
+
+  section {
+    background: var(--box-bg);
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    padding: 25px;
+    font-weight: bold;                     
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+  }
+
+  section:nth-child(1){animation-delay:0.5s;}
+  section:nth-child(2){animation-delay:1s;}
+  section:nth-child(3){animation-delay:1.5s;}
+  @keyframes slideUp {
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  section h2 {
+    font-family: Tahoma, sans-serif;  
+    margin-top: 0;
+    text-align: center;
+  }
+
+
+  .about p    { text-align: justify; }
+  .projects p { text-align: left; }
+
+
+  section:hover {
+    transform: translateY(-5px) scale(1.02);
+    transition: transform 0.4s ease;
+    background: rgba(255,255,255,0.95);
+  }
+
+
+  footer {
+    background: var(--footer-color);
+    color: white;
+    text-align: right;
+    font-variant: small-caps;   
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards 2s;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <header id="hero">
+    <h1>PERSONAL PORTFOLIO</h1>
+    <p style="color: yellow;">Cereal Killer.</p> 
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Hello! I’m Nico, or Colas for short.  
+         My hobbies are simple: cooking, gaming, playing badminton and more.  
+         I’m also a bit of a nerd about some things.  
+         That’s a quick intro about me. 😴
+      </p>
+    </section>
+
+    <section class="projects">
+      <h2>My Projects</h2>
+      <p>Project 1 – Life<br>
+         Project 2 – Nuh uh
+      </p>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Email: pvalenciastephen@gmail.com<br>
+         Phone: 911
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; Colas / CerealKiller
+  </footer>
+
+</div>
+</body>
+</html>
