@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="grou_p.css" />
+  <title>Hyvenn</title>
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="https://raw.githubusercontent.com/Josuu-Campfire/HTML-Activity/main/Assets/cube.png"
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Hind+Guntur:wght@300;400;500;600;700&family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* Style hyperlinks inside the main capsule */
+    .link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+    .link-list a {
+      color: #f5ffe8;
+      text-decoration: none;
+      font-family: "Caudex", serif;
+      font-size: 1.6rem;
+      transition: color 0.2s;
+    }
+    .link-list a:hover {
+      color: var(--accent-mid);
+      text-decoration: underline;
+    }
+
+    /* ---- Shapes in Sidebar ---- */
+    .shapes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      padding-top: 40px;
+    }
+    .shape {
+      width: 70px;
+      height: 70px;
+    }
+    .circle {
+      background-color: #32bbff;
+      border-radius: 50%;
+    }
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 35px solid transparent;
+      border-right: 35px solid transparent;
+      border-bottom: 70px solid #e82525;
+    }
+    .rectangle {
+      background-color: #f4fa56;
+      width: 50px;
+      height: 80px;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <section class="layout">
+    <!-- Header -->
+    <div class="header">
+      <img
+        src="https://raw.githubusercontent.com/Josuu-Campfire/HTML-Activity/main/Assets/hurricane.png"
+        alt="logo"
+      />
+      <h1>Hyvenn</h1>
+    </div>
+
+    <!-- Sidebar with Shapes -->
+    <div class="sidebar">
+      <div class="shapes">
+        <div class="shape circle"></div>
+        <div class="shape triangle"></div>
+        <div class="shape rectangle"></div>
+      </div>
+    </div>
+
+    <!-- Main Content: ONLY hyperlinks -->
+    <div class="main">
+      <div class="maincapsule">
+        <div class="link-list">
+<a href="https://github.com/Josuu-Campfire/HTML-Portfolio/tree/Encinas" target="_blank">Encinas's Branch</a>
+
+<a href="https://github.com/Josuu-Campfire/HTML-Portfolio/tree/Valencia" target="_blank">Valencia's Branch</a>
+
+<a href="https://github.com/Josuu-Campfire/HTML-Portfolio/tree/Godinez" target="_blank">Godinez's Branch</a>
+
+<a href="https://github.com/Josuu-Campfire/HTML-Portfolio/tree/Garcia" target="_blank">Garcia's Branch</a>
+
+<a href="https://github.com/Josuu-Campfire/HTML-Portfolio/tree/Ursal" target="_blank">Ursal's Branch</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <section class="layoutfooter caudex-regular tex">
+        <div class="grow1">Skills/SVG Page Activity</div>
+        <div class="grow1">Members: Ursal, Valencia, Godinez, Garcia, Encinas</div>
+        <div class="grow1">15/09/2025</div>
+      </section>
+    </div>
+  </section>
+
+  <script>
+    /* Accent Color Palette Randomizer (unchanged) */
+    const accentPairs = [
+      { normal: "--accent1", mid: "--accent1-mid", dark: "--accent1-dark" },
+      { normal: "--accent2", mid: "--accent2-mid", dark: "--accent2-dark" },
+      { normal: "--accent3", mid: "--accent3-mid", dark: "--accent3-dark" },
+      { normal: "--accent4", mid: "--accent4-mid", dark: "--accent4-dark" },
+      { normal: "--accent5", mid: "--accent5-mid", dark: "--accent5-dark" },
+    ];
+    const indices = [0, 1, 2, 3, 4].sort(() => Math.random() - 0.5);
+    for (let i = 0; i < 5; i++) {
+      const pair = accentPairs[indices[i]];
+      document.documentElement.style.setProperty(
+        `--accent${i + 1}`,
+        getComputedStyle(document.documentElement).getPropertyValue(pair.normal)
+      );
+      document.documentElement.style.setProperty(
+        `--accent${i + 1}-mid`,
+        getComputedStyle(document.documentElement).getPropertyValue(pair.mid)
+      );
+      document.documentElement.style.setProperty(
+        `--accent${i + 1}-dark`,
+        getComputedStyle(document.documentElement).getPropertyValue(pair.dark)
+      );
+    }
+    document.documentElement.style.setProperty(
+      "--accent",
+      getComputedStyle(document.documentElement).getPropertyValue(`--accent1`)
+    );
+    document.documentElement.style.setProperty(
+      "--accent-mid",
+      getComputedStyle(document.documentElement).getPropertyValue(`--accent1-mid`)
+    );
+    document.documentElement.style.setProperty(
+      "--accent-dark",
+      getComputedStyle(document.documentElement).getPropertyValue(`--accent1-dark`)
+    );
+  </script>
+</body>
+</html>
